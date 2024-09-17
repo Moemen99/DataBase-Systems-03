@@ -95,6 +95,66 @@ erDiagram
 4. Consider using composite keys when a single attribute cannot guarantee uniqueness.
 5. Regularly review and maintain key structures as the database evolves.
 
+# Steps for Creating E-R Diagram: Company Database Case Study
+
+## 1. Entity Identification
+
+- Read through the requirements once to identify all entities.
+- Entities are typically nouns that represent distinct objects or concepts.
+
+### Identified Entities:
+1. Employee
+2. Department
+3. Project
+4. Dependent
+
+## 2. Attribute Assignment
+
+- For each entity, identify its attributes.
+- Pay attention to key attributes (underlined in the requirements).
+
+## 3. Relationship Identification
+
+- Read through the requirements a second time to identify relationships between entities.
+- For each relationship, determine:
+  a. Degree (Unary, Binary, Ternary)
+  b. Cardinality (One-to-One, One-to-Many, Many-to-Many)
+  c. Participation (Total or Partial)
+
+## 4. Special Considerations
+
+- Weak entities (e.g., Dependent) always have total participation in their identifying relationship.
+- The relationship between a strong entity and its weak entity is an identifying relationship.
+
+## 5. Notes from Requirements
+
+- Employees can have multiple dependents, but dependents are removed if the employee leaves.
+- Each department has exactly one manager (an employee) with a hiring date.
+- Employees work in only one department, but departments can have multiple employees.
+- Projects are assigned to one department, but departments can have multiple projects.
+- Employees can work on multiple projects, and projects can have multiple employees.
+- Working hours for each employee on each project need to be recorded.
+- Each employee has a supervisor (another employee).
+
+## 6. E-R Diagram Creation
+
+- Draw entities as rectangles.
+- Represent attributes as ovals connected to their entity.
+- Show relationships as diamond shapes between entities.
+- Use appropriate symbols for cardinality and participation.
+- Represent weak entities with double rectangles.
+- Use double diamonds for identifying relationships.
+
+## 7. Review and Refine
+
+- Ensure all requirements are captured in the diagram.
+- Check for consistency and completeness.
+- Validate that the diagram accurately represents the described system.
+
+---
+
+With these steps and notes in mind, we can proceed to create the E-R diagram for the company database case study.
+
 ## Conclusion
 
 Understanding and properly implementing different types of keys is fundamental to good database design. Keys not only ensure data integrity and uniqueness but also play a vital role in establishing relationships between different entities in a database system. By carefully selecting and managing keys, database designers can create efficient, consistent, and reliable database structures.
